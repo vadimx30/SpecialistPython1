@@ -1,3 +1,4 @@
 New line
 Second line
 Third line. And this is changing of file.
+just information
