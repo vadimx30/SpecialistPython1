@@ -1,3 +1,1 @@
-New project for improving my skills
-
-
+Теория и практика по курсу Python 1
