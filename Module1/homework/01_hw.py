@@ -2,5 +2,4 @@
 # Пример: 
 # вход: 346, выход: 643
 # вход: 100, выход: 001
-print('Hello, Python')
-number = int(input("Enter a number: "))
+
