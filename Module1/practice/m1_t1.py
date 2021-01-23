@@ -5,3 +5,11 @@ number = str(input('Введите трехзначное число: '))
 left=int(number[0])
 right =int(number[2])
 print ('Первая цифра:',left,'\nТретья цифра:',right)
+
+#если через math
+import math
+number = int(input('Введите трехзначное число: '))
+left=int(number/100)
+right=int(number%10)
+print ('Первая цифра:',left,
+       '\nТретья цифра:',right)
