@@ -1,2 +1,9 @@
-# Задача №3
-# Найти каждую цифру четырехзначного числа.
+n = int(input('Р’РІРµРґРёС‚Рµ С‡РµС‚С‹СЂРµС…Р·РЅР°С‡РЅРѕРµ С‡РёСЃР»Рѕ: '))
+a = int((round(n)/1000))
+b = int((round(n)/100) % 10)
+c = int((n // 10) % 10)
+d = int(n % 10) 
+print('First number:', a)
+print('Second number:', b)
+print('Third number:', c)
+print('Fourth number:', d)
