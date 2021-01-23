@@ -1,2 +1,7 @@
-# Задача №2
-# Найти каждую цифру трехзначного числа.
+n = int(input('Р’РІРµРґРёС‚Рµ С‡РµС‚С‹СЂРµС…Р·РЅР°С‡РЅРѕРµ С‡РёСЃР»Рѕ: '))
+b = int((round(n)/100) % 10)
+c = int((n // 10) % 10)
+d = int(n % 10) 
+print('First number:', b)
+print('Second number:', c)
+print('Third number:', d)
