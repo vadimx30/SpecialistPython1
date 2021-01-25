@@ -1,4 +1,4 @@
-﻿import math
+import math
 
 a = 5
 b = 2
