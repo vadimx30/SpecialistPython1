@@ -7,3 +7,12 @@
 # количество лет по вкладу(от 1 до 100).
 # 
 # Выход: итоговая сумма на счету.
+
+initial_deposit = round(float(input('Введите размер вклада (от 100 до 1000000 рублей): ')), 2)
+annual_interest_in = round(float(input('Введите годовой процент начисления(от 1% до 20%): ')), 2)
+annual_interest_out = round(annual_interest_in / 100, 4)
+deposit_term = int(input('Введите количество лет по вкладу(от 1 до 100): '))
+
+result = round(initial_deposit * (1 + annual_interest_out) ** deposit_term, 2)
+
+print('Итоговая сумма на счету ', int(result // 1), 'руб.', int(result % 1 * 100), 'коп.\n(срок вклада', deposit_term, 'лет)')
