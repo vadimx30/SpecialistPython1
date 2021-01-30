@@ -2,3 +2,11 @@
 # Пример:
 # Вход: 1, 9, 2
 # Выход: 1, 2, 9
+
+
+a = int(input('a= '))
+b = int(input('b= '))
+c = int(input('c= '))
+s = [a,b,c]
+s.sort()
+print(*s)
