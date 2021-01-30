@@ -17,7 +17,7 @@ while not lens == 1:
     if not lens == 1: print('Need a char!')
 
 qq = 0
-for i in char:
+for i in string:
     if i == char:
         qq += 1
 print(f'Quantity {char} in {string} = {qq}')
