@@ -14,3 +14,8 @@ t: 1
 n: 1
 1: 1
 """
+
+
+string = [i for i in input('Enter string: ')]
+for item in string:
+    print(item+':',string.count(item))
