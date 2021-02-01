@@ -5,3 +5,15 @@
 In: 'antuh1ouou21au3'
 Out: 1213
 """
+
+a = [i for i in input('Введите строку: ')]
+b = ['0','1', '2', '3', '4', '5', '6', '7', '8', '9']
+c = []
+for i in a:
+    if i in b:
+        c.append(i)
+if c:
+    result = ''.join(c)
+    print(f'Цифры в данной строке: {result}')
+else:
+    print('Цифр в данной строке нет')
