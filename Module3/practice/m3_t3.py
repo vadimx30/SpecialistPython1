@@ -16,5 +16,13 @@ n: 1
 """
 
 a = [i for i in input('Введите строку: ')]
-for i in range(len(a)):
+print(a)
+i = 0
+b = []
+while i < len(a):
     print('Количество вхождений символа',a[i],'=', a.count(a[i]))
+    for k in range(len(a)):
+        if a[k] != a[i]:
+            b.append(a[k])
+    a = b.copy()
+    b.clear()
