@@ -14,3 +14,7 @@ t: 1
 n: 1
 1: 1
 """
+
+a = [i for i in input('Введите строку: ')]
+for i in range(len(a)):
+    print('Количество вхождений символа',a[i],'=', a.count(a[i]))
