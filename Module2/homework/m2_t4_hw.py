@@ -4,18 +4,18 @@
 # Вводим строку до тех пор, пока длина строки
 # меньше 5 символов.
 
-letter = input('Введите символ: ')
 text = input('Введите текст: ')
-count = 0
-
 while len(text) < 5:
-        for i in text:
-            if i == letter:
-                count += 1
-        text = input('Введите текст: ')
-else:
-        for i in text:
-            if i == letter:
-                count += 1
-        
-print(f'Накопленное количество вхождений символа "{letter}" в строку: {count}')
+    text = input('Введите текст (требуется не менее 5 символов): ')
+
+letter = input('Введите символ: ')
+while len(letter) != 1:
+    letter = input('Введите символ (требуется 1 символ): ')
+
+count = 0
+for i in text:
+    if i == letter:
+        count += 1
+            
+print(f'Количество вхождений символа "{letter}"'
+      f' в строку: {count}')
