@@ -4,3 +4,11 @@
 In: Как дела в учебе
 Out: 5
 """
+
+lst = input('Введите текст: ').split()
+count = 0
+
+for _ in lst:
+    if len(_) > count:
+        count = len(_)
+print(f'Букв в самом длинном слове в строке: {count}')
