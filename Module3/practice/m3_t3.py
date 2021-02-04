@@ -14,3 +14,15 @@ t: 1
 n: 1
 1: 1
 """
+
+text = input('Введите текст: ')
+lst = [_ for _ in text]
+used_letters = list()
+lst.remove(' ')
+
+for _ in lst:
+    if _ in used_letters:
+        continue
+    else:
+        print(_, ':', lst.count(_))
+        used_letters.append(_)
