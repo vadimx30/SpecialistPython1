@@ -17,5 +17,8 @@ n: 1
 
 
 string = [i for i in input('Enter string: ')]
+msv = []
 for item in string:
-    print(item+':',string.count(item))
+    if not item in msv:
+        print(item+':',string.count(item))
+        msv.append(item)
