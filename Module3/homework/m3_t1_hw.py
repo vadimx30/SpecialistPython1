@@ -18,3 +18,35 @@ In: 3 8 8 11  Out: WEAKLY ASCENDING
 In: 2 -1 7    Out: RANDOM
 In: 5 5 5 5   Out: CONSTANT
 """
+
+
+c = []
+result = 'NULL'
+i = 0
+while i < 10:
+    ch = int(input('Enter ['+str(i)+']: '))
+    c.append(ch)
+    if i>0:
+       if c[i] == c[i-1]:
+           if result == 'DESCENDING':
+               result = 'WEAKLY DESCENDING'
+           if result == 'ASCENDING':
+               result = 'WEAKLY ASCENDING'
+           if result == 'NULL':
+               result = 'CONSTANT'
+       if c[i] < c[i-1]:
+           if result == 'NULL':
+               result = 'DESCENDING'
+           if result == 'CONSTANT':
+               result = 'WEAKLY DESCENDING'
+           if result == 'ASCENDING' or result == 'WEAKLY ASCENDING':
+               result = 'RANDOM'   
+       if c[i] > c[i-1]:
+           if result == 'NULL':
+               result = 'ASCENDING'
+           if result == 'CONSTANT':
+               result = 'WEAKLY ASCENDING'
+           if result == 'DESCENDING' or result == 'WEAKLY DESCENDING':
+               result = 'RANDOM'   
+    i += 1
+print(*c,' is '+result)
