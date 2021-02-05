@@ -14,3 +14,6 @@ t: 1
 n: 1
 1: 1
 """
+# a = [i for i in input('str a few words: ')]
+# for i in range(len(a)):
+#     print('Number of characters', a[i] ,':', a.count(a[i]))
