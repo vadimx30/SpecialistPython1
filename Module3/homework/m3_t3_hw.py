@@ -22,6 +22,6 @@ import math
 result = math.prod(numbers)
 
 
-print(f'{"".join(formula)} = {result}')
-print(*formula,' = ', result, sep='')
+print(f'{formula} = {result}')
+print(formula,' = ', result, sep='')
 print('{} = {}'.format(formula, result))
