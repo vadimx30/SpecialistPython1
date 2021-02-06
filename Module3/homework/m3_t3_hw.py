@@ -5,3 +5,14 @@ p1*p2*p3*....*pn, где pi - цифра. Вычислите значение в
 In: 5*3*2
 Out: 30
 """
+a = int(input('Сколько чисел нужно перемножить:'))
+list1 = []
+list2 = []
+c = 1
+for i in range(0, a):
+    b = int(input('Число:'))
+    list1.append(b)
+for i in list1:
+    c *= i
+    list2.append(c)
+print(list2[-1])
