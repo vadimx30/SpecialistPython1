@@ -1,14 +1,20 @@
-"""
-Написать 3 функции и оформить решение в виде модуля.
-Дан участок земли прямоугольной формы.
-Нужно посчитать стоимость самой земли и забора по периметру.
+#Возвращает периметр и площадь участка.
+def piece_of_land(length:float, width:float) -> float:
+    perimeter = (length + width)*2
+    perimeter = round(perimeter, 2)
+    area = length * width
+    area = round(area, 2)
+    return perimeter, area
 
-Первая функция принимает в качестве аргументов длину и ширину участка.
-Возвращает периметр и площадь.
-
-Вторая функция принимает в качестве аргументов периметр и стоимость погонного метра забора.
-Возвращает итоговую сумму.
-
-Третья функция принимает в качестве аргументов площадь и стоимость одного квадратного метра земли.
-Возвращает итоговую сумму.
-"""
+#Возвращает итоговую сумму забора.
+def fence_price(perimeter:float, cost:float) -> float:
+    price = perimeter * cost
+    price = round(price, 2)
+    return price
+    
+#Возвращает итоговую сумму земли.
+def full_cost(area:float, land_value:float) -> float:
+    finalcost = area * land_value
+    finalcost = round(finalcost, 2)
+    return finalcost
+    
