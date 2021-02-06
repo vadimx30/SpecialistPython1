@@ -12,3 +12,31 @@
 Третья функция принимает в качестве аргументов площадь и стоимость одного квадратного метра земли.
 Возвращает итоговую сумму.
 """
+
+def func_1(a, b) -> float:
+    """Периметр и площадь"""
+    s = a * b
+    p = 2 * a + 2 * b
+    return s, p
+
+def func_2(p, stoim_zab) -> float:
+    """Возвращает итоговую сумму забора"""
+    summ_zab = p * stoim_zab
+    return summ_zab
+
+def func_3(s, kvad_metr) -> float:
+    """Возвращает итоговую сумму земли"""
+    summ_zem = s * kvad_metr
+    return summ_zem
+
+def main():
+    a = float(input('периметр = '))
+    b = float(input('площадь = '))
+    stoim_zab = float(input('стоимость погонного метра забора = '))
+    kvad_metr = float(input('стоимость одного квадратного метра земли = '))
+    s, p = func_1(a, b)
+    summ_zab = func_2(p, stoim_zab)
+    summ_zem = func_3(s, kvad_metr)
+    
+if __name__ == '__main__':
+    main()
