@@ -11,3 +11,27 @@ for _ in range(10):
 from random import randint
 res = [randint(1, 100) for _ in range(10)]
 """
+
+z = int(input('Введите количество генерируемых чисел: '))
+
+from random import randint
+nums = [randint(1, 100) for _ in range(z)]
+
+print('Последовательность:', *nums)
+
+#сортируем и убираем дубли
+nums.sort()
+sequence = [nums[0]]
+i = 1
+j = 0
+while i < len(nums):
+    if sequence[j] != nums[i]:
+        sequence.append(nums[i])
+        j += 1
+    i += 1
+
+x = sequence[:1]
+sequence.pop(0)
+y = sequence[:1]
+
+print('Самые малые числа:', *x, 'и', *y)
