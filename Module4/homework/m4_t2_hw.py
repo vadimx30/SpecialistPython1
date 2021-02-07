@@ -37,9 +37,6 @@ def chk_right(a,b,c):
     s = get_square(a,b,c,True)
     if (proove(1/2*a*b,s,0.01) or
         proove(1/2*a*c,s,0.01) or
-        proove(1/2*b*a,s,0.01) or
-        proove(1/2*b*c,s,0.01) or
-        proove(1/2*c*a,s,0.01) or
         proove(1/2*c*b,s,0.01)):
         return True
     else:
