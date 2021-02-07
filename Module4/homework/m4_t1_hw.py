@@ -12,3 +12,14 @@ Out: 1 бутылка
 In: 22
 Out: 22 бутылки
 """
+
+def prosklonyat(a):
+    if a%1:
+        return 'бутылка'
+    if a%2 or a%3 or a%4:
+        return 'бутылки'
+    else:
+        return 'бутылок'
+    
+a = int(input('Сколько брать то? '))
+print(f'А хватит ли. Всего: {a}',prosklonyat(a))
