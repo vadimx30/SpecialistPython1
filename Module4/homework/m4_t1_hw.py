@@ -22,4 +22,4 @@ def prosklonyat(a):
         return 'бутылок'
     
 a = int(input('Сколько брать то? '))
-print(f'А хватит ли {a}',prosklonyat(a))
+print(f'А хватит ли. Всего: {a}',prosklonyat(a))
