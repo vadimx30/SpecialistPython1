@@ -14,7 +14,7 @@
 """
 
 def param(a: float, b: float) -> tuple:
-    '''определение площади'''
+    '''определение параметров'''
     perimetr = a * 2 + b * 2
     s = a * b
     return perimetr, s
@@ -30,17 +30,20 @@ def acrage(s: float, acrage_price: float) -> float:
     return acrage_cost
 
 def main():
-    a = float(input('Длина: '))
-    b = float(input('Ширина: '))
-    zabor_price = float(input('Цена погонного метра забора: '))
-    acrage_price = float(input('Цена квадратного метра земли: '))
+    a = float(input('Длина, м: '))
+    b = float(input('Ширина, м: '))
+    zabor_price = float(input('Цена погонного метра забора, усл.ед.: '))
+    acrage_price = float(input('Цена квадратного метра земли, усл.ед.: '))
     
     perimetr, s = param(a, b)
     zabor_cost = zabor(perimetr, zabor_price)
     acrage_cost = acrage(s, acrage_price)
-    print('Параметры (периметр и площадь):', *(param(a, b)))
-    print('Стоимость забора:', zabor_cost)
-    print('Стоимость участка:', acrage_cost)
+    print('Периметр: {:.1f} м\n'
+          'Площадь: {:.1f} кв.м'.format(perimetr, s))
+    print('Стоимость забора: {:.1f} усл.ед.'.format(zabor_cost))
+    print('Стоимость участка: {:.1f} усл.ед.'.format(acrage_cost))
 
 if __name__ == '__main__':
     main()
+
+#целый модуль при необходимости импортируем через from m4_t1 import main
