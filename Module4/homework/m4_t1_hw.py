@@ -12,3 +12,22 @@ Out: 1 бутылка
 In: 22
 Out: 22 бутылки
 """
+
+import func2
+a = int(input('Введите целое число от 0 до 200: '))
+while a > 200 or a < 0:
+    a = int(input('Введите целое число от 0 до 200: '))
+result = func2.but(a)
+print(f'{a} {result}')
+
+# func2
+def but(a: int) -> str:
+    """poisk okonchaniya butilok"""
+    c = ''
+    if a % 10 == 1:
+        c = 'бутылка'
+    elif a % 10 >= 2 and a % 10 <= 4:
+        c = 'бутылки'
+    else:
+        c = 'бутылок'
+    return c
