@@ -12,3 +12,13 @@ Out: 1 бутылка
 In: 22
 Out: 22 бутылки
 """
+
+import sys
+def bottle():
+    kol_but = int(input('Введите кол-во бутылок от 0 до 200: '))
+    if int(kol_but % 10) == 1:
+        print(f'{kol_but} бутылка')
+    elif int(kol_but % 10) == 2 or int(kol_but % 10) == 3 or int(kol_but % 10) == 4:
+        print(f'{kol_but} бутылки')
+    else:
+        print(f'{kol_but} бутылок')
