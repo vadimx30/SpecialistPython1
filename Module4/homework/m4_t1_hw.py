@@ -24,7 +24,9 @@ print(f'{a} {result}')
 def but(a: int) -> str:
     """poisk okonchaniya butilok"""
     c = ''
-    if a % 10 == 1:
+    if a % 100 > 10 or a % 100 < 20:
+        c = 'бутылок'
+    elif a % 10 == 1:
         c = 'бутылка'
     elif a % 10 >= 2 and a % 10 <= 4:
         c = 'бутылки'
