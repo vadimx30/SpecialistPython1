@@ -28,6 +28,9 @@ def proverka2(a: tuple, b:tuple) -> str:
     a = tuple(sorted(a))
     b = tuple(sorted(b))
     result = ''
+    if a[0] == b[0] or a[1] == b[1] or a[2] == b[2]:
+        result = 'Коробки нельзя вложить одну в другую'
+        return result
     i = 1
     if a[0] > b[0]:
         while i < 3:
