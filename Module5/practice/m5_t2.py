@@ -11,3 +11,15 @@
     0 1 0 1
     1 0 1 0
 '''
+def My_Chess_board
+x1 = int(input())
+y1 = int(input())
+x2 = int(input())
+y2 = int(input())
+...
+x20 = int(input))
+y20 = int(input))
+if (x1 + y1 + x2 + y2...+x20+y20) % 2 == 0:
+    print('YES')
+else:
+    print('NO')
