@@ -14,9 +14,9 @@ Out: 22 бутылки
 """
 
 def prosklonyat(a):
-    if a%1:
+    if (a-1)%10 == 0:
         return 'бутылка'
-    if a%2 or a%3 or a%4:
+    if (a-2)%10 == 0 or (a-3)%10 == 0 or (a-4)%10 == 0:
         return 'бутылки'
     else:
         return 'бутылок'
