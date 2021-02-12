@@ -16,3 +16,29 @@
 хороший пароль -> o58anuahaunH!
 плохой пароль -> saucacAusacu8  -> нет
 '''
+password = input('Введите пароль:')
+def good_password(password):
+    x = True
+    if len(password) > 15:
+        print('Пароль должен быть не более 15 символов')
+        x = False
+    if len(password) < 8:
+        print('Пароль должен быть не менее 8 символов')
+        x = False
+    if password.islower() or password.isupper():
+        print('Пароль должен содержать и прописные и строчные буквы')
+        x = False
+    if password.isdigit() or password.isalpha():
+        print('Пароль должен содержать и цифры, и буквы')
+        x = False
+    if x:
+        return x
+
+symbols = ['_', '!', '@', '#', '$', '%', '^', '&', '*']
+if not any(i in symbols for i in password):
+    print('Пароль должен содержать символы')
+
+if (good_password(password)):
+    print(f'{password} - хороший пароль')
+else:
+    print(f'{password} - плохой пароль')
