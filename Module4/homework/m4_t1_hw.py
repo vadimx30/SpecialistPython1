@@ -12,3 +12,25 @@ Out: 1 бутылка
 In: 22
 Out: 22 бутылки
 """
+# любое количество бутылок
+a = int(input('enter:'))
+b = a % 100
+c = b % 10
+if b == 0:
+    print(f' {a} бутылок')
+if b == 1:
+    print(f' {a} бутылка')
+if b > 1 and b < 5:
+    print(f' {a} бутылки')
+if b > 4 and b < 21:
+    print(f' {a} бутылок')
+if b > 20 and b < 5:
+    c = b % 10
+if b > 20 and c == 0:
+    print(f' {a} бутылок')
+if b > 20 and c == 1:
+    print(f' {a} бутылка')
+if b > 20 and c < 5 and c > 1:
+    print(f' {a} бутылки')
+if b > 20 and c > 4:
+    print(f' {a} бутылок')
