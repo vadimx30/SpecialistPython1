@@ -14,7 +14,7 @@ def backupf(dirf,ex):
         os.mkdir(path)
     for f in glob.glob('*.'+ex):
         newp = os.path.join(path,f)
-        shutil.copyfile(f,newp)
+        shutil.copy2(f,newp)
 # 
 
 backupf(os.getcwd(),'py')
