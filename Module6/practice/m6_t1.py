@@ -7,4 +7,4 @@ import glob
 from pprint import pprint
 a = glob.glob('*.py')
 for i in a:
-    print(f'{os.path.getsize(i)} КБ')
+    print(f'{os.path.getsize(i)} bytes')
