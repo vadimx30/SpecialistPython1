@@ -7,4 +7,4 @@ a = os.listdir(os.curdir)
 b = 0
 for i in a:
     b += os.path.getsize(i)
-print(f'{b} KB')
+print(f'{b} bytes')
