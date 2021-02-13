@@ -18,15 +18,15 @@ def main():
     z = int(z)
  
     result = {}
-    columns = list(st.ascii_lowercase)
+    columns = list(st.ascii_lowercase[:z])
     lines = [(i + 1) for i in range(z)]
-    
-    while len(columns) != len(lines):
-        columns.pop()
+  
     lines.reverse()
 
-    for i in range(z):
-        result = {x: columns+lines for x in lines}
+
+
+
+    result = {x: columns+lines for x in lines}
     
     for key, value in result.items():
         for i in range(z):
@@ -44,4 +44,4 @@ def main():
 
     
 if __name__ == '__main__':
-    main()    
+    main()
