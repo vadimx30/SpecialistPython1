@@ -26,15 +26,11 @@ def main():
 
 
 
-    result = {x: columns+lines for x in lines}
+    result = {x: columns.copy() for x in lines}
     
     for key, value in result.items():
         for i in range(z):
              value[i] += str(key)
-
-    for key, value in result.items():
-        while len(value) != z:
-            value.pop()
 
     for key, value in result.items():
         if int(key) > 9:
@@ -44,4 +40,4 @@ def main():
 
     
 if __name__ == '__main__':
-    main()
+    main()  
