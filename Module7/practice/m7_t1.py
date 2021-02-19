@@ -3,6 +3,8 @@
 добавить обработку исключений для случаев сложения str с int, float и bool
 """
 
+import random
+
 class Str_a_Error(Exception):
     print('')
 class Str_b_Error(Exception):
@@ -25,8 +27,10 @@ def summary_func(a, b):
         
 
 def main():
-    a = '2'
-    b = False
+    a = random.choice(['str', random.randint(0,100), random.uniform(0, 100),
+                       random.random()])
+    b = random.choice(['str', random.randint(0,100), random.uniform(0, 100),
+                       random.random()])
     summary_func(a, b)
 
 
