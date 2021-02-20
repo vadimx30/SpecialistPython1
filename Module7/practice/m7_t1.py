@@ -6,9 +6,9 @@
 import random
 
 class Str_a_Error(Exception):
-    print('')
+    pass
 class Str_b_Error(Exception):
-    print('')
+    pass
 
 
 def summary_func(a, b):
