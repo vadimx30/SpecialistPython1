@@ -11,3 +11,26 @@ with open('presents.txt', 'w') as file:
         print(round(randint(10, 1000) / randint(2, 10), 2), end=end_flag, file=file)
 
 ''' Ваш код'''
+
+lst = []
+with open('presents.txt', 'r') as f:
+    for line in f.readlines():
+        lst.append((line.strip('\n')))
+
+result = ' '.join(lst)
+
+result = result.split()
+print(f'Список покупок: {", ".join(result)}')
+
+float_lst = []
+for i in result:
+    float_lst.append(float(i))
+
+sum_res = sum(float_lst)
+print(f'Сумма: {sum_res}')
+
+
+max_1 = max(float_lst)
+float_lst.remove(max_1)
+max_2 = max(float_lst)
+print(f'Две самые дорогие покупки: {max_1}, {max_2}')
