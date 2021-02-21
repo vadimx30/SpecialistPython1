@@ -6,3 +6,10 @@
 dict_a = {1:15, 2:21}
 dict_b = {3:13, 4:54}
 dict_c = {5:75, 6:68}
+
+dict_a = {1:15, 2:21}
+dict_b = {3:13, 4:54}
+dict_c = {5:75, 6:68}
+dict_a.update(dict_b)
+dict_a.update(dict_c)
+print(dict_a)
