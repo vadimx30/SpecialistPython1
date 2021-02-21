@@ -13,5 +13,5 @@ for i in numbers:
     if i == 237:
         sys.exit()
     else:
-        if (i // 100 + (i // 10 - i // 100) + i % 10) % 2 == 0:
+        if (i // 100 + ((i % 100) // 10) + i % 10) % 2 == 0:
             print(i)
