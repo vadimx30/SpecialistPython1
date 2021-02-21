@@ -12,13 +12,6 @@ n = 2
 lst = [code[i:i+n] for i in range(0, len(code), n)]
 
 
-result = []
-try:
-    for i in lst:
-        result.append(st.ascii_lowercase[int(i)])
-except IndexError:
-    result.append(' ')
-    for i in lst[6:]:
-        result.append(st.ascii_lowercase[int(i)])
-finally:
-    print(''.join(result))
+d1 = {str(k).zfill(2): v for k, v in enumerate(st.ascii_lowercase)}
+d1['26'] = ' '
+print(''.join(d1[i] for i in lst))
