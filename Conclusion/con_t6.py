@@ -11,3 +11,12 @@ with open('presents.txt', 'w') as file:
         print(round(randint(10, 1000) / randint(2, 10), 2), end=end_flag, file=file)
 
 ''' Ваш код'''
+
+import sys
+y = []
+with open('presents.txt', 'r') as file:
+    x = file.readlines()
+    x = [line.rstrip() for line in x]
+    for i in x:
+        y.append(i.split(' '))
+    print(y)
