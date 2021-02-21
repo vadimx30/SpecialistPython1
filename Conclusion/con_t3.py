@@ -5,3 +5,20 @@
     Проверка работы функции выполняется через вторую строку.
 """
 code = '070411111426152419071413'
+
+import string as st
+
+n = 2
+lst = [code[i:i+n] for i in range(0, len(code), n)]
+
+
+result = []
+try:
+    for i in lst:
+        result.append(st.ascii_lowercase[int(i)])
+except IndexError:
+    result.append(' ')
+    for i in lst[6:]:
+        result.append(st.ascii_lowercase[int(i)])
+finally:
+    print(''.join(result))
