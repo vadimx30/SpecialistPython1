@@ -11,3 +11,22 @@ with open('presents.txt', 'w') as file:
         print(round(randint(10, 1000) / randint(2, 10), 2), end=end_flag, file=file)
 
 ''' Ваш код'''
+
+
+with open('presents.txt', 'r') as file:
+    d =file.readlines()
+pokupki = []
+index = 0
+for i in d:
+    pokupka = i.split()
+    ipokupka = [float(i) for i in pokupka]
+    st = 0
+    for p in ipokupka:
+        st +=p
+    print(f'pokupka {index+1} = {ipokupka}, st = {st}')
+    pokupki.append(st)
+    index += 1
+pokupki.sort()
+last = pokupki[len(pokupki)-1]
+pred = pokupki[len(pokupki)-2]
+print(f'maximum pokupki = {last} and {pred}')
