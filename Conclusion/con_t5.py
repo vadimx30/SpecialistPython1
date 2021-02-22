@@ -6,3 +6,23 @@ numbers = [
     386, 462, 47, 418, 907, 344, 236, 375, 823, 566, 597, 978, 328, 615, 953, 345, 
     399, 162, 758, 219, 918, 237, 412, 566, 826, 248, 866, 950, 626, 949, 687, 217, 
 ]
+def pr(a: int) -> int:
+    b = str(a)
+    z = list(b)
+    summ = 0
+    for i in z:
+        summ += int(i)
+    if not summ % 2:
+        a = 0
+    return a
+
+result = []
+for i in numbers:
+    if i == 237:
+        print('Конец работы')
+        break
+    else:
+        if pr(i) != 0:
+            result.append(i)
+print(result)
+        
